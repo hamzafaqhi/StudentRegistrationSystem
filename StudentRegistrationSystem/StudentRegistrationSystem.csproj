@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE074F9D-C1A9-450D-B841-45D0FCA56227}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StudentRegistrationSystem</RootNamespace>
+    <AssemblyName>StudentRegistrationSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="screens\admin_registraton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\admin_registraton.Designer.cs">
+      <DependentUpon>admin_registraton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSqlServer\sqlconnection.cs" />
+    <Compile Include="screens\AssignCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\AssignCourses.Designer.cs">
+      <DependentUpon>AssignCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\Course.Designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\create_course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\create_course.Designer.cs">
+      <DependentUpon>create_course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="screens\Register_Courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\Register_Courses.Designer.cs">
+      <DependentUpon>Register_Courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\Registered teachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\Registered teachers.Designer.cs">
+      <DependentUpon>Registered teachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\registered_students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\registered_students.Designer.cs">
+      <DependentUpon>registered_students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\Student_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\Student_main.Designer.cs">
+      <DependentUpon>Student_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\Student_registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\Student_registration.Designer.cs">
+      <DependentUpon>Student_registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\teacher_registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\teacher_registration.Designer.cs">
+      <DependentUpon>teacher_registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utilities\Appsetting.cs" />
+    <EmbeddedResource Include="screens\admin_registraton.resx">
+      <DependentUpon>admin_registraton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\AssignCourses.resx">
+      <DependentUpon>AssignCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\create_course.resx">
+      <DependentUpon>create_course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="screens\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\Registered teachers.resx">
+      <DependentUpon>Registered teachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\registered_students.resx">
+      <DependentUpon>registered_students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\Register_Courses.resx">
+      <DependentUpon>Register_Courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\Student_main.resx">
+      <DependentUpon>Student_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\Student_registration.resx">
+      <DependentUpon>Student_registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\teacher_registration.resx">
+      <DependentUpon>teacher_registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bahria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bahiralogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bahrialogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avb423e4ea7e79aa1be3c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
